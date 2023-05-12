@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const StepsContainer = ({ fullArea, bgColor, children }) => {
+const StepsContainerA = ({ fullArea, bgColor, children }) => {
   const [activeStep, setActiveStep] = useState(0)
 
   const handleNextStep = () => {
@@ -27,4 +27,4 @@ const StepsContainer = ({ fullArea, bgColor, children }) => {
   )
 }
 
-export default StepsContainer
+export default StepsContainerA

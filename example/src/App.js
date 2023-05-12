@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
 import './App.css'
 
+import { StepsContainer, Step } from 'react-step-by-step'
 import 'react-step-by-step/dist/index.css'
-import StepsContainer from './components/steps-container'
-import Step from './components/step'
 
 const App = () => {
   const [values, setValues] = useState({
@@ -18,7 +17,11 @@ const App = () => {
   return (
     <div>
       <StepsContainer fullArea={false} bgColor={'cyan'}>
-        <Step title='Step 1'>
+        <Step
+          title='Step 1'
+          hideTitle={false}
+          customNextStepFunction={() => alert('as')}
+        >
           <div>First</div>
           <input
             placeholder='aa'

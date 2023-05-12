@@ -11,7 +11,6 @@
   flex: 1;
   display: flex;
   align-items: center;
-  background-color: orange;
 }
 
 .stepTitle {
@@ -34,10 +33,15 @@
 .stepButton {
   width: 90%;
   height: 60%;
-  background-color: red;
+  background-color: #e50914;
   border: none;
   border-radius: 3px;
   font-size: large;
   color: white;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.stepButton:hover {
+  filter: contrast(1.2);
 }

@@ -1,15 +1,50 @@
-/* add css module styles here (optional) */
-
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.stepContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+.stepTitleDiv {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
-/* .stepsContainer {
-  width: 368px;
-  height: 468px;
-  background-color: tomato;
-} */
+.stepTitle {
+  margin: 3%;
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.stepChildrenDiv {
+  margin: 3%;
+  flex: 4;
+}
+
+.stepButtonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.stepButton {
+  margin: 3%;
+  min-height: 36px;
+  width: 100%;
+  height: 60%;
+  background-color: #e50914;
+  border: none;
+  border-radius: 3px;
+  font-size: large;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.stepButton:hover {
+  filter: contrast(1.2);
+}

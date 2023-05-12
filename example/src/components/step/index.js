@@ -1,29 +1,50 @@
 import React, { useState } from 'react'
 
-const Step = ({ title, children, onNextStep, onLastStep }) => {
+const StepA = ({
+  title,
+  children,
+  onNextStep,
+  onLastStep,
+  hideTitle,
+  customButtonStyle,
+  customNextStepFunction
+}) => {
   const [isCompleted, setIsCompleted] = useState(false)
 
   const handleNextStep = () => {
     setIsCompleted(true)
     if (onNextStep) {
       onNextStep()
+      customNextStepFunction()
     }
   }
 
   return (
     <div className='stepContainer'>
-      <div className='stepTitleDiv'>
-        <div className='stepTitle'>{title}</div>
-      </div>
+      {!hideTitle && (
+        <div className='stepTitleDiv'>
+          <div className='stepTitle'>{title}</div>
+        </div>
+      )}
+
       <div className='stepChildrenDiv'>{children}</div>
+
       <div className='stepButtonDiv'>
         {!isCompleted && !onLastStep && (
-          <button onClick={handleNextStep} className='stepButton'>
+          <button
+            onClick={handleNextStep}
+            style={customButtonStyle}
+            className='stepButton'
+          >
             Next Step
           </button>
         )}
         {onLastStep && (
-          <button onClick={onLastStep} className='stepButton'>
+          <button
+            onClick={onLastStep}
+            style={customButtonStyle}
+            className='stepButton'
+          >
             Finish
           </button>
         )}
@@ -32,4 +53,4 @@ const Step = ({ title, children, onNextStep, onLastStep }) => {
   )
 }
 
-export default Step
+export default StepA
