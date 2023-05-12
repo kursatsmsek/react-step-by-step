@@ -12,12 +12,22 @@ const Step = ({ title, children, onNextStep, onLastStep }) => {
 
   return (
     <div className='stepContainer'>
-      <h2>{title}</h2>
-      {children}
-      {!isCompleted && !onLastStep && (
-        <button onClick={handleNextStep}>Next Step</button>
-      )}
-      {onLastStep && <button onClick={onLastStep}>Finish</button>}
+      <div className='stepTitleDiv'>
+        <div className='stepTitle'>{title}</div>
+      </div>
+      <div className='stepChildrenDiv'>{children}</div>
+      <div className='stepButtonDiv'>
+        {!isCompleted && !onLastStep && (
+          <button onClick={handleNextStep} className='stepButton'>
+            Next Step
+          </button>
+        )}
+        {onLastStep && (
+          <button onClick={onLastStep} className='stepButton'>
+            Finish
+          </button>
+        )}
+      </div>
     </div>
   )
 }

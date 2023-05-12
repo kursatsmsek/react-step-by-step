@@ -19,7 +19,7 @@ const App = () => {
     <div>
       <StepsContainer fullArea={false} bgColor={'cyan'}>
         <Step title='Step 1'>
-          <p>First</p>
+          <div>First</div>
           <input
             placeholder='aa'
             value={values.input1}
