@@ -1,6 +1,6 @@
 {
   "name": "react-step-by-step",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react-step-by-step is a package that provides a step-by-step guide for building React applications. It offers a simple and intuitive way to break down complex tasks into smaller, manageable steps, making it easier for developers to create interactive and organized user interfaces.",
   "author": "kursatsmsek",
   "license": "MIT",
