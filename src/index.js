@@ -1,10 +1,6 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
-}
-
 export const StepsContainer = ({ fullArea, bgColor, children }) => {
   const [activeStep, setActiveStep] = useState(0)
 
@@ -34,10 +30,12 @@ export const StepsContainer = ({ fullArea, bgColor, children }) => {
 
 export const Step = ({
   title,
+  buttonText,
   children,
   onNextStep,
   onLastStep,
   hideTitle,
+  hideButton,
   customButtonStyle,
   customNextStepFunction
 }) => {
@@ -57,36 +55,34 @@ export const Step = ({
     <div className={styles.stepContainer}>
       {!hideTitle && (
         <div className={styles.stepTitleDiv}>
-          <div className='stepTitle'>{title}</div>
+          <div className={styles.stepTitle}>{title}</div>
         </div>
       )}
 
       <div className={styles.stepChildrenDiv}>{children}</div>
 
-      <div className={styles.stepButtonDiv}>
-        {!isCompleted && !onLastStep && (
-          <button
-            onClick={handleNextStep}
-            style={customButtonStyle}
-            className={styles.stepButton}
-          >
-            Next Step
-          </button>
-        )}
-        {onLastStep && (
-          <button
-            onClick={onLastStep}
-            style={customButtonStyle}
-            className={styles.stepButton}
-          >
-            Finish
-          </button>
-        )}
-      </div>
+      {!hideButton && (
+        <div className={styles.stepButtonDiv}>
+          {!isCompleted && !onLastStep && (
+            <button
+              onClick={handleNextStep}
+              style={customButtonStyle}
+              className={styles.stepButton}
+            >
+              {buttonText}
+            </button>
+          )}
+          {onLastStep && (
+            <button
+              onClick={onLastStep}
+              style={customButtonStyle}
+              className={styles.stepButton}
+            >
+              {buttonText}
+            </button>
+          )}
+        </div>
+      )}
     </div>
   )
 }
-
-// export const StepsContainer = () => {
-//   return <div className={styles.stepsContainer}>Aynen</div>
-// }

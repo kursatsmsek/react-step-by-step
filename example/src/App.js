@@ -19,7 +19,9 @@ const App = () => {
       <StepsContainer fullArea={false} bgColor={'cyan'}>
         <Step
           title='Step 1'
+          buttonText='Next Step'
           hideTitle={false}
+          buttonClassName='aynenn'
           customNextStepFunction={() => alert('as')}
         >
           <div>First</div>
@@ -29,7 +31,7 @@ const App = () => {
             onChange={(e) => setValues({ ...values, input1: e.target.value })}
           />
         </Step>
-        <Step title='Step 2'>
+        <Step title='Step 2' buttonText='Next Step'>
           <p>Second</p>
           <input
             placeholder='aa'
@@ -37,7 +39,7 @@ const App = () => {
             onChange={(e) => setValues({ ...values, input2: e.target.value })}
           />
         </Step>
-        <Step title='Last Step' onLastStep={handleLastStep}>
+        <Step title='Last Step' onLastStep={handleLastStep} buttonText='Finish'>
           <p>Last</p>
           <input
             placeholder='aa'
