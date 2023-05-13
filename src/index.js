@@ -86,3 +86,29 @@ export const Step = ({
     </div>
   )
 }
+
+export const OutlinedInput = ({
+  placeholder,
+  value,
+  onChange,
+  disabled,
+  maxLength,
+  required,
+  autoFocus
+}) => {
+  const className = 'pure-material-textfield-outlined'
+  return (
+    <label className={styles[className]}>
+      <input
+        placeholder=' '
+        value={value}
+        onChange={onChange}
+        disabled={disabled}
+        maxLength={maxLength}
+        required={required}
+        autoFocus={autoFocus}
+      />
+      <span>{placeholder}</span>
+    </label>
+  )
+}
