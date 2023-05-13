@@ -67,6 +67,9 @@ import 'react-step-by-step/dist/index.css'
 </StepsContainer>
 ```
 
+https://github.com/kursatsmsek/react-step-by-step/assets/80540635/070ead80-567e-495f-b184-724da4f4a092
+
+
 ## License
 
 MIT © [kursatsmsek](https://github.com/kursatsmsek)
