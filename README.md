@@ -18,17 +18,13 @@ import React, { Component } from 'react'
 import { StepsContainer, Step, OutlinedInput } from 'react-step-by-step'
 import 'react-step-by-step/dist/index.css'
 
-<StepsContainer fullArea={false} borderRadius='5px'>
+;<StepsContainer fullArea={false} borderRadius='5px'>
   <Step title='Sign In' buttonText='Next Step' hideTitle={true}>
-    <div style={{ fontWeight: 'bold' }}>
-      Hey there! Ready to join the fun?
-    </div>
+    <div style={{ fontWeight: 'bold' }}>Hey there! Ready to join the fun?</div>
     <div style={{ fontSize: 'x-small', marginBottom: '4px' }}>
       Fill in your email address below and let's get this party started!
     </div>
-    <OutlinedInput
-      placeholder='E-mail'
-    />
+    <OutlinedInput placeholder='E-mail' />
   </Step>
   <Step
     title='Sign In'
@@ -36,21 +32,19 @@ import 'react-step-by-step/dist/index.css'
     buttonText='Sign In'
     hideTitle={true}
   >
-    <div style={{ fontWeight: 'bold' }}>
-      Welcome to the sweet realm!
-    </div>
+    <div style={{ fontWeight: 'bold' }}>Welcome to the sweet realm!</div>
     <div style={{ fontSize: 'x-small', marginBottom: '4px' }}>
-      To unlock the confectionery wonders, kindly share your password in
-      the box below.
+      To unlock the confectionery wonders, kindly share your password in the box
+      below.
     </div>
-    <OutlinedInput
-      type='password'
-      placeholder='Password'
-    />
+    <OutlinedInput type='password' placeholder='Password' />
   </Step>
-  <Step title='Signed Up !' onLastStep={() => console.log("button is hide here")} hideButton={true}>
-    <div style={{ fontWeight: 'bold' }}>
-    </div>
+  <Step
+    title='Signed Up !'
+    onLastStep={() => console.log('button is hide here')}
+    hideButton={true}
+  >
+    <div style={{ fontWeight: 'bold' }}></div>
     <div
       style={{
         fontWeight: 'bold',
@@ -58,17 +52,13 @@ import 'react-step-by-step/dist/index.css'
         marginBottom: '4px'
       }}
     >
-      Welcome to our sweet sanctuary of indulgence! Join us for a
-      delightful experience filled with delectable treats and sugary
-      delights. Get ready to satisfy your cravings and embark on a
-      mouthwatering adventure!
+      Welcome to our sweet sanctuary of indulgence! Join us for a delightful
+      experience filled with delectable treats and sugary delights. Get ready to
+      satisfy your cravings and embark on a mouthwatering adventure!
     </div>
   </Step>
 </StepsContainer>
 ```
-
-https://github.com/kursatsmsek/react-step-by-step/assets/80540635/070ead80-567e-495f-b184-724da4f4a092
-
 
 ## License
 
