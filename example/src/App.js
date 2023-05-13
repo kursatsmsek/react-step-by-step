@@ -19,7 +19,7 @@ const App = () => {
 
   return (
     <div className='app'>
-      <StepsContainer fullArea={false} bgColor={'cyan'} borderRadius='5px'>
+      <StepsContainer fullArea={false} borderRadius='5px'>
         <Step title='Sign In' buttonText='Next Step' hideTitle={true}>
           <div style={{ fontWeight: 'bold' }}>
             Hey there! Ready to join the fun?
