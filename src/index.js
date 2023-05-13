@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import styles from './styles.module.css'
 
-export const StepsContainer = ({ fullArea, bgColor, children }) => {
+export const StepsContainer = ({
+  fullArea,
+  bgColor,
+  children,
+  borderRadius
+}) => {
   const [activeStep, setActiveStep] = useState(0)
 
   const handleNextStep = () => {
@@ -10,8 +15,10 @@ export const StepsContainer = ({ fullArea, bgColor, children }) => {
 
   const containerStyle = {
     width: fullArea ? '100%' : '368px',
-    height: fullArea ? '100%' : '468px',
-    backgroundColor: bgColor ? bgColor : 'transparent'
+    height: fullArea ? '100%' : 'auto',
+    minHeight: '468px',
+    backgroundColor: bgColor ? bgColor : 'transparent',
+    borderRadius: borderRadius ? borderRadius : 0
   }
 
   return (
@@ -94,12 +101,14 @@ export const OutlinedInput = ({
   disabled,
   maxLength,
   required,
-  autoFocus
+  autoFocus,
+  type
 }) => {
   const className = 'pure-material-textfield-outlined'
   return (
     <label className={styles[className]}>
       <input
+        type={type}
         placeholder=' '
         value={value}
         onChange={onChange}
