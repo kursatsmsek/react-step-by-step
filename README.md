@@ -17,48 +17,32 @@ import React, { Component } from 'react'
 
 import { StepsContainer, Step, OutlinedInput } from 'react-step-by-step'
 import 'react-step-by-step/dist/index.css'
-
 ;<StepsContainer fullArea={false} borderRadius='5px'>
-  <Step title='Sign In' buttonText='Next Step' hideTitle={true}>
-    <div style={{ fontWeight: 'bold' }}>Hey there! Ready to join the fun?</div>
-    <div style={{ fontSize: 'x-small', marginBottom: '4px' }}>
-      Fill in your email address below and let's get this party started!
-    </div>
+  <Step title='Step 1' buttonText='Next Step' hideTitle={true}>
+    <div>Customize Here</div>
     <OutlinedInput placeholder='E-mail' />
   </Step>
   <Step
-    title='Sign In'
+    title='Step 2'
     customNextStepFunction={() => console.log('delightful journey')}
-    buttonText='Sign In'
+    buttonText='Step 2'
     hideTitle={true}
   >
-    <div style={{ fontWeight: 'bold' }}>Welcome to the sweet realm!</div>
-    <div style={{ fontSize: 'x-small', marginBottom: '4px' }}>
-      To unlock the confectionery wonders, kindly share your password in the box
-      below.
-    </div>
-    <OutlinedInput type='password' placeholder='Password' />
+    <div>Customize Here</div>
   </Step>
   <Step
-    title='Signed Up !'
+    title='Step 3 !'
     onLastStep={() => console.log('button is hide here')}
     hideButton={true}
   >
-    <div style={{ fontWeight: 'bold' }}></div>
-    <div
-      style={{
-        fontWeight: 'bold',
-        fontSize: 'small',
-        marginBottom: '4px'
-      }}
-    >
-      Welcome to our sweet sanctuary of indulgence! Join us for a delightful
-      experience filled with delectable treats and sugary delights. Get ready to
-      satisfy your cravings and embark on a mouthwatering adventure!
-    </div>
+    <div>Customize Here</div>
   </Step>
 </StepsContainer>
 ```
+
+## Example Video
+
+[![example video](https://img.youtube.com/vi/2vb0SS0R2iw/0.jpg)](https://www.youtube.com/watch?v=2vb0SS0R2iw)
 
 ## License
 
