@@ -8,6 +8,7 @@ import AnimalLion from './pictures/AnimalLion.png'
 import AnimalPanda from './pictures/AnimalPanda.png'
 
 const App = () => {
+  const [activeStep, setActiveStep] = useState(0)
   const [values, setValues] = useState({
     input1: '',
     input2: ''
@@ -19,8 +20,18 @@ const App = () => {
 
   return (
     <div className='app'>
-      <StepsContainer fullArea={false} borderRadius='5px'>
-        <Step title='Sign In' buttonText='Next Step' hideTitle={true}>
+      <StepsContainer
+        fullArea={false}
+        borderRadius='5px'
+        activeStep={activeStep}
+        setActiveStep={setActiveStep}
+      >
+        <Step
+          title='Sign In'
+          buttonText='Next Step'
+          hideTitle={true}
+          hideButton={true}
+        >
           <div style={{ fontWeight: 'bold' }}>
             Hey there! Ready to join the fun?
             <img src={AnimalPanda} alt='elephant' width={'90%'} />

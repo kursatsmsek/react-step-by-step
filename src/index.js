@@ -5,9 +5,11 @@ export const StepsContainer = ({
   fullArea,
   bgColor,
   children,
-  borderRadius
+  borderRadius,
+  activeStep,
+  setActiveStep
 }) => {
-  const [activeStep, setActiveStep] = useState(0)
+  // const [activeStep, setActiveStep] = useState(0)
 
   const handleNextStep = () => {
     setActiveStep(activeStep + 1)
