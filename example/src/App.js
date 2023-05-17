@@ -26,12 +26,7 @@ const App = () => {
         activeStep={activeStep}
         setActiveStep={setActiveStep}
       >
-        <Step
-          title='Sign In'
-          buttonText='Next Step'
-          hideTitle={true}
-          hideButton={true}
-        >
+        <Step title='Sign In' buttonText='Next Step' hideTitle={true}>
           <div style={{ fontWeight: 'bold' }}>
             Hey there! Ready to join the fun?
             <img src={AnimalPanda} alt='elephant' width={'90%'} />
