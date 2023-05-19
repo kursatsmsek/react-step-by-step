@@ -18,7 +18,7 @@ export const StepsContainer = ({
   const containerStyle = {
     width: fullArea ? '100%' : '368px',
     height: fullArea ? '100%' : 'auto',
-    minHeight: '468px',
+    // minHeight: '468px',
     backgroundColor: bgColor ? bgColor : 'transparent',
     borderRadius: borderRadius ? borderRadius : 0
   }

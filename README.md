@@ -17,7 +17,15 @@ import React, { Component } from 'react'
 
 import { StepsContainer, Step, OutlinedInput } from 'react-step-by-step'
 import 'react-step-by-step/dist/index.css'
-;<StepsContainer fullArea={false} borderRadius='5px'>
+
+const [activeStep, setActiveStep] = useState(0)
+
+  <StepsContainer
+    fullArea={true}
+    borderRadius='5px'
+    activeStep={activeStep}
+    setActiveStep={setActiveStep}
+  >
   <Step title='Step 1' buttonText='Next Step' hideTitle={true}>
     <div>Customize Here</div>
     <OutlinedInput placeholder='E-mail' />
